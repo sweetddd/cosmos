@@ -71,7 +71,7 @@ type NoOpTracer struct{}
 
 func (dt NoOpTracer) CaptureStateAfter(pc uint64, op vm.OpCode, gas, cost uint64, scope *vm.ScopeContext, rData []byte, depth int, err error) {
 	//TODO implement me
-	panic("implement me")
+	//panic("implement me")
 }
 
 // NewNoOpTracer creates a no-op vm.Tracer

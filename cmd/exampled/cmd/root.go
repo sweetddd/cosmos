@@ -2,7 +2,8 @@ package cmd
 
 import (
 	"errors"
-	"example/encoding"
+	appparams "example/app/params"
+	//"example/encoding"
 	ethermint "example/types"
 	sdkserver "github.com/cosmos/cosmos-sdk/server"
 	"io"
@@ -45,18 +46,16 @@ import (
 	//appparams "example/app/params"
 	ethermintclient "example/client"
 
-	"github.com/cosmos/cosmos-sdk/simapp/params"
-
 	servercfg "example/server/config"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application
-func NewRootCmd() (*cobra.Command, params.EncodingConfig) {
-	//encodingConfig := app.MakeEncodingConfig()
+func NewRootCmd() (*cobra.Command, appparams.EncodingConfig) {
+	encodingConfig := app.MakeEncodingConfig()
 
-	encodingConfig := encoding.MakeConfig(app.ModuleBasics)
+	//encodingConfig := encoding.MakeConfig(app.ModuleBasics)
 	initClientCtx := client.Context{}.
-		WithCodec(encodingConfig.Codec).
+		WithCodec(encodingConfig.Marshaler).
 		WithInterfaceRegistry(encodingConfig.InterfaceRegistry).
 		WithTxConfig(encodingConfig.TxConfig).
 		WithLegacyAmino(encodingConfig.Amino).
@@ -114,7 +113,7 @@ func initTendermintConfig() *tmcfg.Config {
 
 func initRootCmd(
 	rootCmd *cobra.Command,
-	encodingConfig params.EncodingConfig,
+	encodingConfig appparams.EncodingConfig,
 ) {
 	// Set config
 	initSDKConfig()
@@ -238,7 +237,7 @@ func overwriteFlagDefaults(c *cobra.Command, defaults map[string]string) {
 }
 
 type appCreator struct {
-	encodingConfig params.EncodingConfig
+	encodingConfig appparams.EncodingConfig
 }
 
 // newApp creates a new Cosmos SDK app

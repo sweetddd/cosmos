@@ -70,7 +70,14 @@ type StateDB struct {
 
 func (s *StateDB) GetKeccakCodeHash(address common.Address) common.Hash {
 	//TODO implement me
-	panic("implement me")
+	//panic("implement me")
+
+	stateObject := s.getStateObject(address)
+	if stateObject == nil {
+		return common.Hash{}
+	}
+	return common.BytesToHash(stateObject.KeccakCodeHash())
+
 }
 
 func (s *StateDB) GetPoseidonCodeHash(address common.Address) common.Hash {

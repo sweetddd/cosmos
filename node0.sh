@@ -28,4 +28,4 @@ jq '.consensus_params["block"]["max_gas"]="10000000"' onenode/config/genesis.jso
 TRACE=""
 
 ## Start the node (remove the --pruning=nothing flag if historical queries are not needed)
-#./onenode/exampled start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home onenode
+./onenode/exampled start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home onenode

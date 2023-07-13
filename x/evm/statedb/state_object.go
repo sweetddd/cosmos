@@ -250,3 +250,9 @@ func (s *stateObject) SetState(key common.Hash, value common.Hash) {
 func (s *stateObject) setState(key, value common.Hash) {
 	s.dirtyStorage[key] = value
 }
+
+func (s *stateObject) KeccakCodeHash() []byte {
+	//return s.account.KeccakCodeHash
+
+	return nil
+}

@@ -116,11 +116,10 @@ import (
 	examplemoduletypes "example/x/example/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	//appparams "example/app/params"
+	appparams "example/app/params"
 	"example/docs"
 	srvflags "example/server/flags"
-
-	sdkappparams "github.com/cosmos/cosmos-sdk/simapp/params"
+	//sdkappparams "github.com/cosmos/cosmos-sdk/simapp/params"
 )
 
 const (
@@ -276,11 +275,11 @@ func New(
 	skipUpgradeHeights map[int64]bool,
 	homePath string,
 	invCheckPeriod uint,
-	encodingConfig sdkappparams.EncodingConfig,
+	encodingConfig appparams.EncodingConfig,
 	appOpts servertypes.AppOptions,
 	baseAppOptions ...func(*baseapp.BaseApp),
 ) *App {
-	appCodec := encodingConfig.Codec
+	appCodec := encodingConfig.Marshaler
 	cdc := encodingConfig.Amino
 	interfaceRegistry := encodingConfig.InterfaceRegistry
 
