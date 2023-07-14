@@ -63,7 +63,9 @@ func init() {
 	proto.RegisterType((*Params)(nil), "example.example.Params")
 }
 
-func init() { proto.RegisterFile("example/example/params.proto", fileDescriptor_4c47f291af903609) }
+func init() {
+	proto.RegisterFile("github.com/zkevm/sequencer/example/params.proto", fileDescriptor_4c47f291af903609)
+}
 
 var fileDescriptor_4c47f291af903609 = []byte{
 	// 125 bytes of a gzipped FileDescriptorProto

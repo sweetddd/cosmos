@@ -4,26 +4,20 @@ rm -rf data/testnet/zkevm-sequencer-0
 rm -rf data/testnet/zkevm-sequencer-1
 rm -rf data/testnet/zkevm-sequencer-2
 
-go build -o ./data/testnet/zkevm-sequencer-0/sequencerd example/cmd/sequencerd
+sequencerd init node0 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-0
+sequencerd init node1 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-1
+sequencerd init node2 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-2
 
-mkdir data/testnet/zkevm-sequencer-1 data/testnet/zkevm-sequencer-2
-cp ./data/testnet/zkevm-sequencer-0/sequencerd data/testnet/zkevm-sequencer-1/sequencerd
-cp ./data/testnet/zkevm-sequencer-0/sequencerd data/testnet/zkevm-sequencer-2/sequencerd
+yes | sequencerd keys add testnet0  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+yes | sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+yes | sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+yes | sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-1 --keyring-backend os
+yes | sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-2 --keyring-backend os
 
-./data/testnet/zkevm-sequencer-0/sequencerd init node0 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-0
-./data/testnet/zkevm-sequencer-1/sequencerd init node1 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-1
-./data/testnet/zkevm-sequencer-2/sequencerd init node2 --chain-id testnet_8999-1 --home data/testnet/zkevm-sequencer-2
-
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys add testnet0  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
-yes | ./data/testnet/zkevm-sequencer-1/sequencerd keys add testnet1  --home data/testnet/zkevm-sequencer-1 --keyring-backend os
-yes | ./data/testnet/zkevm-sequencer-2/sequencerd keys add testnet2  --home data/testnet/zkevm-sequencer-2 --keyring-backend os
-
-echo "get private"
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys unsafe-export-eth-key testnet0  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
-#yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys unsafe-export-eth-key testnet1  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
-#yes | ./data/testnet/zkevm-sequencer-0/sequencerd keys unsafe-export-eth-key testnet2  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+echo "==========================get private==========================="
+yes | sequencerd keys unsafe-export-eth-key testnet0  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+#yes | sequencerd keys unsafe-export-eth-key testnet1  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
+#yes | sequencerd keys unsafe-export-eth-key testnet2  --home data/testnet/zkevm-sequencer-0 --keyring-backend os
 
 jq '.app_state["staking"]["params"]["bond_denom"]="stake"' data/testnet/zkevm-sequencer-0/config/genesis.json >data/testnet/zkevm-sequencer-0/config/tmp_genesis.json && mv data/testnet/zkevm-sequencer-0/config/tmp_genesis.json data/testnet/zkevm-sequencer-0/config/genesis.json
 jq '.app_state["crisis"]["constant_fee"]["denom"]="stake"' data/testnet/zkevm-sequencer-0/config/genesis.json >data/testnet/zkevm-sequencer-0/config/tmp_genesis.json && mv data/testnet/zkevm-sequencer-0/config/tmp_genesis.json data/testnet/zkevm-sequencer-0/config/genesis.json
@@ -34,19 +28,19 @@ jq '.app_state["inflation"]["params"]["mint_denom"]="stake"' data/testnet/zkevm-
 
 jq '.consensus_params["block"]["max_gas"]="10000000"' data/testnet/zkevm-sequencer-0/config/genesis.json >data/testnet/zkevm-sequencer-0/config/tmp_genesis.json && mv data/testnet/zkevm-sequencer-0/config/tmp_genesis.json data/testnet/zkevm-sequencer-0/config/genesis.json
 
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd add-genesis-account testnet0 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd add-genesis-account testnet1 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd add-genesis-account testnet2 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
-yes | ./data/testnet/zkevm-sequencer-1/sequencerd add-genesis-account testnet1 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-1
-yes | ./data/testnet/zkevm-sequencer-2/sequencerd add-genesis-account testnet2 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-2
+yes | sequencerd add-genesis-account testnet0 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
+yes | sequencerd add-genesis-account testnet1 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
+yes | sequencerd add-genesis-account testnet2 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-0
+yes | sequencerd add-genesis-account testnet1 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-1
+yes | sequencerd add-genesis-account testnet2 100000000000000000000000000stake --keyring-backend os --home data/testnet/zkevm-sequencer-2
 
-yes | ./data/testnet/zkevm-sequencer-0/sequencerd gentx  testnet0 1000000000000000000000stake --home data/testnet/zkevm-sequencer-0  --keyring-backend os --chain-id testnet_8999-1
-yes | ./data/testnet/zkevm-sequencer-1/sequencerd gentx  testnet1 1000000000000000000000stake --home data/testnet/zkevm-sequencer-1  --keyring-backend os --chain-id testnet_8999-1
-yes | ./data/testnet/zkevm-sequencer-2/sequencerd gentx  testnet2 1000000000000000000000stake --home data/testnet/zkevm-sequencer-2  --keyring-backend os --chain-id testnet_8999-1
+yes | sequencerd gentx  testnet0 1000000000000000000000stake --home data/testnet/zkevm-sequencer-0  --keyring-backend os --chain-id testnet_8999-1
+yes | sequencerd gentx  testnet1 1000000000000000000000stake --home data/testnet/zkevm-sequencer-1  --keyring-backend os --chain-id testnet_8999-1
+yes | sequencerd gentx  testnet2 1000000000000000000000stake --home data/testnet/zkevm-sequencer-2  --keyring-backend os --chain-id testnet_8999-1
 
-./data/testnet/zkevm-sequencer-0/sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-0
-./data/testnet/zkevm-sequencer-1/sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-1
-./data/testnet/zkevm-sequencer-2/sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-2
+sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-0
+sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-1
+sequencerd collect-gentxs --home data/testnet/zkevm-sequencer-2
 
 jq '.app_state["bank"]["supply"][0]["denom"]="stake"' data/testnet/zkevm-sequencer-0/config/genesis.json >data/testnet/zkevm-sequencer-0/config/tmp_genesis.json && mv data/testnet/zkevm-sequencer-0/config/tmp_genesis.json data/testnet/zkevm-sequencer-0/config/genesis.json
 jq '.app_state["bank"]["supply"][0]["amount"]="500000000000000000000000000"' data/testnet/zkevm-sequencer-0/config/genesis.json >data/testnet/zkevm-sequencer-0/config/tmp_genesis.json && mv data/testnet/zkevm-sequencer-0/config/tmp_genesis.json data/testnet/zkevm-sequencer-0/config/genesis.json
@@ -63,6 +57,6 @@ sed -i.bak  's/allow_duplicate_ip = false/allow_duplicate_ip = true/g' data/test
 TRACE=""
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)
-./data/testnet/zkevm-sequencer-0/sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-0
-./data/testnet/zkevm-sequencer-1/sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-1
-./data/testnet/zkevm-sequencer-2/sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-2
+sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-0
+sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-1
+sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001stake --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-2

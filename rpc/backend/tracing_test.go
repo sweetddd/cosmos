@@ -3,10 +3,6 @@ package backend
 import (
 	"fmt"
 
-	"example/crypto/ethsecp256k1"
-	"example/indexer"
-	"example/rpc/backend/mocks"
-	evmtypes "example/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/crypto"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
@@ -16,6 +12,10 @@ import (
 	"github.com/tendermint/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
+	"github.com/zkevm/sequencer/indexer"
+	"github.com/zkevm/sequencer/rpc/backend/mocks"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestTraceTransaction() {

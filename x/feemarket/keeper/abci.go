@@ -18,8 +18,8 @@ package keeper
 import (
 	"fmt"
 
-	"example/x/feemarket/types"
 	abci "github.com/tendermint/tendermint/abci/types"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"

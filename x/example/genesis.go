@@ -1,9 +1,9 @@
 package example
 
 import (
-	"example/x/example/keeper"
-	"example/x/example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/x/example/keeper"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

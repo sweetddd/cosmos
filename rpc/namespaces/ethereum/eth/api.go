@@ -29,11 +29,11 @@ import (
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 
-	"example/rpc/backend"
+	"github.com/zkevm/sequencer/rpc/backend"
 
-	rpctypes "example/rpc/types"
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // The Ethereum API allows applications to connect to an Evmos node that is

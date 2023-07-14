@@ -23,9 +23,6 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
-	rpctypes "example/rpc/types"
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
@@ -33,6 +30,9 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
 	"github.com/pkg/errors"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

@@ -21,9 +21,9 @@ import (
 
 	"github.com/ethereum/go-ethereum/params"
 
-	"example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/core/vm"
+	"github.com/zkevm/sequencer/types"
 )
 
 var (

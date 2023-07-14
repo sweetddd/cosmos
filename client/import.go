@@ -20,13 +20,13 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"example/crypto/ethsecp256k1"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/input"
 	"github.com/cosmos/cosmos-sdk/crypto"
 	"github.com/ethereum/go-ethereum/common"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
 
-	"example/crypto/hd"
+	"github.com/zkevm/sequencer/crypto/hd"
 )
 
 // UnsafeImportKeyCommand imports private keys from a keyfile.

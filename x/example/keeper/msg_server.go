@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"example/x/example/types"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 type msgServer struct {

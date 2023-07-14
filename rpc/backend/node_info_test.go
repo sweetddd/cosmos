@@ -4,15 +4,15 @@ import (
 	"fmt"
 	"math/big"
 
-	"example/crypto/ethsecp256k1"
-	"example/rpc/backend/mocks"
-	ethermint "example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/spf13/viper"
 	tmrpcclient "github.com/tendermint/tendermint/rpc/client"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
+	"github.com/zkevm/sequencer/rpc/backend/mocks"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 func (suite *BackendTestSuite) TestRPCMinGasPrice() {

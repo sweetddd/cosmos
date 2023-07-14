@@ -16,13 +16,13 @@
 package cli
 
 import (
-	rpctypes "example/rpc/types"
 	"github.com/spf13/cobra"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // GetQueryCmd returns the parent command for all x/bank CLi query commands.

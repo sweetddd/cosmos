@@ -30,7 +30,7 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 
-	evmtypes "example/x/evm/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // SendTransaction sends transaction based on received args using Node's key to sign it

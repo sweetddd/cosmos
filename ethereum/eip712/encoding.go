@@ -26,8 +26,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	txTypes "github.com/cosmos/cosmos-sdk/types/tx"
 
-	ethermint "example/types"
 	apitypes "github.com/ethereum/go-ethereum/signer/core/apitypes"
+	ethermint "github.com/zkevm/sequencer/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 )

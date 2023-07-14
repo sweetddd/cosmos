@@ -27,9 +27,9 @@ import (
 	ethcrypto "github.com/ethereum/go-ethereum/crypto"
 	"github.com/spf13/cobra"
 
-	"example/crypto/ethsecp256k1"
-	"example/crypto/hd"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
+	"github.com/zkevm/sequencer/crypto/hd"
 )
 
 // UnsafeExportEthKeyCommand exports a key with the given name as a private key in hex format.

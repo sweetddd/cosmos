@@ -4,11 +4,6 @@ import (
 	"fmt"
 	"math/big"
 
-	"example/indexer"
-	"example/rpc/backend/mocks"
-	rpctypes "example/rpc/types"
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
@@ -17,6 +12,11 @@ import (
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
 	"github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	"github.com/zkevm/sequencer/indexer"
+	"github.com/zkevm/sequencer/rpc/backend/mocks"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 	"google.golang.org/grpc/metadata"
 )
 

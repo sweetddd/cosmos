@@ -27,7 +27,7 @@ import (
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // GetEthIntrinsicGas returns the intrinsic gas cost for the transaction

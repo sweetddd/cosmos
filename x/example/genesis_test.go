@@ -3,11 +3,11 @@ package example_test
 import (
 	"testing"
 
-	keepertest "example/testutil/keeper"
-	"example/testutil/nullify"
-	"example/x/example"
-	"example/x/example/types"
 	"github.com/stretchr/testify/require"
+	keepertest "github.com/zkevm/sequencer/testutil/keeper"
+	"github.com/zkevm/sequencer/testutil/nullify"
+	"github.com/zkevm/sequencer/x/example"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 func TestGenesis(t *testing.T) {

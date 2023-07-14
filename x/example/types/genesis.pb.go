@@ -72,7 +72,9 @@ func init() {
 	proto.RegisterType((*GenesisState)(nil), "example.example.GenesisState")
 }
 
-func init() { proto.RegisterFile("example/example/genesis.proto", fileDescriptor_c2b8e4636e3182f7) }
+func init() {
+	proto.RegisterFile("github.com/zkevm/sequencer/example/genesis.proto", fileDescriptor_c2b8e4636e3182f7)
+}
 
 var fileDescriptor_c2b8e4636e3182f7 = []byte{
 	// 167 bytes of a gzipped FileDescriptorProto

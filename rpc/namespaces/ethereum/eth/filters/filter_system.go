@@ -37,8 +37,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"example/rpc/ethereum/pubsub"
-	evmtypes "example/x/evm/types"
+	"github.com/zkevm/sequencer/rpc/ethereum/pubsub"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 var (

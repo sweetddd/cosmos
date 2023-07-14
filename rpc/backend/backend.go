@@ -21,10 +21,6 @@ import (
 	"math/big"
 	"time"
 
-	rpctypes "example/rpc/types"
-	"example/server/config"
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	"github.com/cosmos/cosmos-sdk/server"
@@ -37,6 +33,10 @@ import (
 	"github.com/ethereum/go-ethereum/signer/core/apitypes"
 	"github.com/tendermint/tendermint/libs/log"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	"github.com/zkevm/sequencer/server/config"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // BackendI implements the Cosmos and EVM backend.

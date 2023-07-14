@@ -18,7 +18,7 @@ package keeper
 import (
 	"math/big"
 
-	"example/x/feemarket/types"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

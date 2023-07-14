@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	"example/x/feemarket/types"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 
 	sdkmath "cosmossdk.io/math"
 	sdk "github.com/cosmos/cosmos-sdk/types"

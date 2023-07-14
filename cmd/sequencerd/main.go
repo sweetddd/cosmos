@@ -6,8 +6,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/server"
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
-	"example/app"
-	"example/cmd/sequencerd/cmd"
+	"github.com/zkevm/sequencer/app"
+	"github.com/zkevm/sequencer/cmd/sequencerd/cmd"
 )
 
 func main() {

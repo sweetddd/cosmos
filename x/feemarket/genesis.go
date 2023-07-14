@@ -20,8 +20,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"example/x/feemarket/keeper"
-	"example/x/feemarket/types"
+	"github.com/zkevm/sequencer/x/feemarket/keeper"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 // InitGenesis initializes genesis state based on exported genesis

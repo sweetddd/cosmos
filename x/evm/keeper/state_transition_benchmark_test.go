@@ -5,7 +5,6 @@ import (
 	"math/big"
 	"testing"
 
-	evmtypes "example/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/crypto/keyring"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
@@ -13,6 +12,7 @@ import (
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/stretchr/testify/require"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 var templateAccessListTx = &ethtypes.AccessListTx{

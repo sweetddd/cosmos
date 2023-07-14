@@ -1,12 +1,12 @@
 package app
 
 import (
-	enccodec "example/encoding/codec"
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/cosmos/cosmos-sdk/x/auth/tx"
+	enccodec "github.com/zkevm/sequencer/encoding/codec"
 
-	"example/app/params"
+	"github.com/zkevm/sequencer/app/params"
 )
 
 // makeEncodingConfig creates an EncodingConfig for an amino based test configuration.

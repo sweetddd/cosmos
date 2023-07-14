@@ -29,19 +29,19 @@ import (
 
 	"github.com/davecgh/go-spew/spew"
 
-	evmtypes "example/x/evm/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 
 	stderrors "github.com/pkg/errors"
 
 	"github.com/cosmos/cosmos-sdk/server"
 
-	"example/rpc/backend"
-	rpctypes "example/rpc/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/consensus/ethash"
 	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/tendermint/tendermint/libs/log"
+	"github.com/zkevm/sequencer/rpc/backend"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
 )
 
 // HandlerT keeps track of the cpu profiler and trace execution

@@ -8,7 +8,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"example/x/example/types"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 var (

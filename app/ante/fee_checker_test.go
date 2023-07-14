@@ -6,10 +6,6 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"example/encoding"
-	ethermint "example/types"
-	"example/x/evm/types"
-	evmtypes "example/x/evm/types"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
@@ -17,6 +13,10 @@ import (
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/tendermint/tendermint/libs/log"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+	"github.com/zkevm/sequencer/encoding"
+	ethermint "github.com/zkevm/sequencer/types"
+	"github.com/zkevm/sequencer/x/evm/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 var _ DynamicFeeEVMKeeper = MockEVMKeeper{}

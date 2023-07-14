@@ -2,10 +2,10 @@ package cmd
 
 import (
 	"errors"
-	appparams "example/app/params"
+	appparams "github.com/zkevm/sequencer/app/params"
 	//"example/encoding"
-	ethermint "example/types"
 	sdkserver "github.com/cosmos/cosmos-sdk/server"
+	ethermint "github.com/zkevm/sequencer/types"
 	"io"
 	"os"
 	"path/filepath"
@@ -20,7 +20,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/rpc"
 	//"github.com/cosmos/cosmos-sdk/server"
 
-	"example/server"
+	"github.com/zkevm/sequencer/server"
 
 	serverconfig "github.com/cosmos/cosmos-sdk/server/config"
 	servertypes "github.com/cosmos/cosmos-sdk/server/types"
@@ -42,11 +42,11 @@ import (
 	dbm "github.com/tendermint/tm-db"
 	// this line is used by starport scaffolding # root/moduleImport
 
-	"example/app"
+	"github.com/zkevm/sequencer/app"
 	//appparams "example/app/params"
-	ethermintclient "example/client"
+	ethermintclient "github.com/zkevm/sequencer/client"
 
-	servercfg "example/server/config"
+	servercfg "github.com/zkevm/sequencer/server/config"
 )
 
 // NewRootCmd creates a new root command for a Cosmos SDK application

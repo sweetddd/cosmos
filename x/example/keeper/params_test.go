@@ -3,9 +3,9 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "example/testutil/keeper"
-	"example/x/example/types"
 	"github.com/stretchr/testify/require"
+	testkeeper "github.com/zkevm/sequencer/testutil/keeper"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 func TestGetParams(t *testing.T) {

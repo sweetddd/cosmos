@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"sort"
 
-	etherminthd "example/crypto/hd"
+	etherminthd "github.com/zkevm/sequencer/crypto/hd"
 
 	bip39 "github.com/cosmos/go-bip39"
 	"github.com/spf13/cobra"

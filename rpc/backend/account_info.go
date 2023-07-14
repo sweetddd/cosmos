@@ -21,13 +21,13 @@ import (
 	"math/big"
 
 	sdkmath "cosmossdk.io/math"
-	rpctypes "example/rpc/types"
-	evmtypes "example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/pkg/errors"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // GetCode returns the contract code at the given address and block number.

@@ -7,11 +7,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"example/app"
-	"example/encoding"
-	v5 "example/x/evm/migrations/v5"
-	v5types "example/x/evm/migrations/v5/types"
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/app"
+	"github.com/zkevm/sequencer/encoding"
+	v5 "github.com/zkevm/sequencer/x/evm/migrations/v5"
+	v5types "github.com/zkevm/sequencer/x/evm/migrations/v5/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 func TestMigrate(t *testing.T) {

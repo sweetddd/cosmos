@@ -19,12 +19,12 @@ import (
 	"fmt"
 	"strconv"
 
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	abci "github.com/tendermint/tendermint/abci/types"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // EventFormat is the format version of the events.

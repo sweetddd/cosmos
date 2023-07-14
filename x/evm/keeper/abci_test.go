@@ -1,8 +1,8 @@
 package keeper_test
 
 import (
-	evmtypes "example/x/evm/types"
 	"github.com/tendermint/tendermint/abci/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) TestEndBlock() {

@@ -4,10 +4,10 @@ import (
 	"context"
 	"testing"
 
-	keepertest "example/testutil/keeper"
-	"example/x/example/keeper"
-	"example/x/example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	keepertest "github.com/zkevm/sequencer/testutil/keeper"
+	"github.com/zkevm/sequencer/x/example/keeper"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 func setupMsgServer(t testing.TB) (types.MsgServer, context.Context) {

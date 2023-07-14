@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"testing"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 func BenchmarkSetParams(b *testing.B) {

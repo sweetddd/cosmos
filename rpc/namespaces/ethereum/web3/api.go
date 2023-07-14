@@ -16,7 +16,7 @@
 package web3
 
 import (
-	"example/version"
+	"github.com/zkevm/sequencer/version"
 
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	"github.com/ethereum/go-ethereum/crypto"

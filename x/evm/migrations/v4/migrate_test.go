@@ -5,14 +5,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 
-	"example/app"
-	"example/encoding"
-	v4 "example/x/evm/migrations/v4"
-	v4types "example/x/evm/migrations/v4/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/app"
+	"github.com/zkevm/sequencer/encoding"
+	v4 "github.com/zkevm/sequencer/x/evm/migrations/v4"
+	v4types "github.com/zkevm/sequencer/x/evm/migrations/v4/types"
 )
 
 type mockSubspace struct {

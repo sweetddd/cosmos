@@ -23,16 +23,16 @@ import (
 
 	"github.com/ethereum/go-ethereum/rpc"
 
-	"example/rpc/backend"
-	"example/rpc/namespaces/ethereum/debug"
-	"example/rpc/namespaces/ethereum/eth"
-	"example/rpc/namespaces/ethereum/eth/filters"
-	"example/rpc/namespaces/ethereum/miner"
-	"example/rpc/namespaces/ethereum/net"
-	"example/rpc/namespaces/ethereum/personal"
-	"example/rpc/namespaces/ethereum/txpool"
-	"example/rpc/namespaces/ethereum/web3"
-	ethermint "example/types"
+	"github.com/zkevm/sequencer/rpc/backend"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/debug"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/eth"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/eth/filters"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/miner"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/net"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/personal"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/txpool"
+	"github.com/zkevm/sequencer/rpc/namespaces/ethereum/web3"
+	ethermint "github.com/zkevm/sequencer/types"
 
 	rpcclient "github.com/tendermint/tendermint/rpc/jsonrpc/client"
 )

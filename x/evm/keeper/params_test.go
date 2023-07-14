@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"reflect"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 func (suite *KeeperTestSuite) TestParams() {

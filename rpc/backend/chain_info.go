@@ -21,16 +21,16 @@ import (
 	"math/big"
 	"strconv"
 
-	rpctypes "example/rpc/types"
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
-	feemarkettypes "example/x/feemarket/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common/hexutil"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/params"
 	"github.com/ethereum/go-ethereum/rpc"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
+	feemarkettypes "github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 // ChainID is the EIP-155 replay-protection chain id for the current ethereum chain config.

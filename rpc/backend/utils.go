@@ -37,9 +37,9 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmrpctypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"example/rpc/types"
-	evmtypes "example/x/evm/types"
 	"github.com/tendermint/tendermint/proto/tendermint/crypto"
+	"github.com/zkevm/sequencer/rpc/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 type txGasAndReward struct {

@@ -21,8 +21,8 @@ import (
 	"sync"
 	"time"
 
-	"example/rpc/types"
 	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/zkevm/sequencer/rpc/types"
 
 	"github.com/tendermint/tendermint/libs/log"
 
@@ -35,7 +35,7 @@ import (
 	"github.com/ethereum/go-ethereum/eth/filters"
 	"github.com/ethereum/go-ethereum/rpc"
 
-	evmtypes "example/x/evm/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // FilterAPI gathers

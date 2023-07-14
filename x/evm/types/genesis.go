@@ -18,7 +18,7 @@ package types
 import (
 	"fmt"
 
-	ethermint "example/types"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 // Validate performs a basic validation of a GenesisAccount fields.

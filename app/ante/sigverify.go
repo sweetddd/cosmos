@@ -19,10 +19,10 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
-	evmtypes "example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	errortypes "github.com/cosmos/cosmos-sdk/types/errors"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 // EthSigVerificationDecorator validates an ethereum signatures

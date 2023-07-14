@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"example/x/example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 // GetParams get all parameters as types.Params

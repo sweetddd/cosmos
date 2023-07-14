@@ -23,7 +23,9 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.GoGoProtoPackageIsVersion3 // please upgrade the proto package
 
-func init() { proto.RegisterFile("example/example/tx.proto", fileDescriptor_2046031f056b170e) }
+func init() {
+	proto.RegisterFile("github.com/zkevm/sequencer/example/tx.proto", fileDescriptor_2046031f056b170e)
+}
 
 var fileDescriptor_2046031f056b170e = []byte{
 	// 101 bytes of a gzipped FileDescriptorProto
@@ -75,5 +77,5 @@ var _Msg_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*MsgServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams:     []grpc.StreamDesc{},
-	Metadata:    "example/example/tx.proto",
+	Metadata:    "github.com/zkevm/sequencer/example/tx.proto",
 }

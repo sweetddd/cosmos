@@ -5,8 +5,8 @@ import (
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	v4types "example/x/evm/migrations/v4/types"
-	"example/x/evm/types"
+	v4types "github.com/zkevm/sequencer/x/evm/migrations/v4/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // MigrateStore migrates the x/evm module state from the consensus version 3 to

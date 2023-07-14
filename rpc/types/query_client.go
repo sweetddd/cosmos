@@ -25,8 +25,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 
-	evmtypes "example/x/evm/types"
-	feemarkettypes "example/x/feemarket/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
+	feemarkettypes "github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 // QueryClient defines a gRPC Client used for:

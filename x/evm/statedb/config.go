@@ -18,9 +18,9 @@ package statedb
 import (
 	"math/big"
 
-	"example/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/params"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // TxConfig encapulates the readonly information of current tx for `StateDB`.

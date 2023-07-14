@@ -5,18 +5,18 @@ import (
 
 	"cosmossdk.io/math"
 
-	"example/ethereum/eip712"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/simapp/params"
 	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/zkevm/sequencer/ethereum/eip712"
 
-	"example/crypto/ethsecp256k1"
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
 
-	"example/app"
-	"example/encoding"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
+	"github.com/zkevm/sequencer/app"
+	"github.com/zkevm/sequencer/encoding"
 
 	txtypes "github.com/cosmos/cosmos-sdk/types/tx"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"

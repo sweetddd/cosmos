@@ -34,9 +34,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"example/x/evm/client/cli"
-	"example/x/evm/keeper"
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/client/cli"
+	"github.com/zkevm/sequencer/x/evm/keeper"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 var (

@@ -31,7 +31,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"example/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 var _ types.MsgServer = &Keeper{}

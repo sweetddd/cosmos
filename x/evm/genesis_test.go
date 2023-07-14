@@ -5,12 +5,12 @@ import (
 
 	"github.com/ethereum/go-ethereum/common"
 
-	"example/crypto/ethsecp256k1"
-	etherminttypes "example/types"
-	"example/x/evm"
-	"example/x/evm/statedb"
-	"example/x/evm/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
+	"github.com/zkevm/sequencer/crypto/ethsecp256k1"
+	etherminttypes "github.com/zkevm/sequencer/types"
+	"github.com/zkevm/sequencer/x/evm"
+	"github.com/zkevm/sequencer/x/evm/statedb"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 func (suite *EvmTestSuite) TestInitGenesis() {

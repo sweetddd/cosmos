@@ -1,15 +1,15 @@
 package app
 
 import (
-	"example/app/ante"
-	ethermint "example/types"
-	"example/x/evm"
-	evmkeeper "example/x/evm/keeper"
-	evmtypes "example/x/evm/types"
-	"example/x/evm/vm/geth"
-	"example/x/feemarket"
-	feemarketkeeper "example/x/feemarket/keeper"
-	feemarkettypes "example/x/feemarket/types"
+	"github.com/zkevm/sequencer/app/ante"
+	ethermint "github.com/zkevm/sequencer/types"
+	"github.com/zkevm/sequencer/x/evm"
+	evmkeeper "github.com/zkevm/sequencer/x/evm/keeper"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
+	"github.com/zkevm/sequencer/x/evm/vm/geth"
+	"github.com/zkevm/sequencer/x/feemarket"
+	feemarketkeeper "github.com/zkevm/sequencer/x/feemarket/keeper"
+	feemarkettypes "github.com/zkevm/sequencer/x/feemarket/types"
 	"io"
 	"os"
 	"path/filepath"
@@ -111,14 +111,14 @@ import (
 	tmos "github.com/tendermint/tendermint/libs/os"
 	dbm "github.com/tendermint/tm-db"
 
-	examplemodule "example/x/example"
-	examplemodulekeeper "example/x/example/keeper"
-	examplemoduletypes "example/x/example/types"
+	examplemodule "github.com/zkevm/sequencer/x/example"
+	examplemodulekeeper "github.com/zkevm/sequencer/x/example/keeper"
+	examplemoduletypes "github.com/zkevm/sequencer/x/example/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
-	appparams "example/app/params"
-	"example/docs"
-	srvflags "example/server/flags"
+	appparams "github.com/zkevm/sequencer/app/params"
+	"github.com/zkevm/sequencer/docs"
+	srvflags "github.com/zkevm/sequencer/server/flags"
 	//sdkappparams "github.com/cosmos/cosmos-sdk/simapp/params"
 )
 

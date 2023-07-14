@@ -3,13 +3,13 @@ package v4_test
 import (
 	"testing"
 
-	"example/app"
-	"example/encoding"
-	v4 "example/x/feemarket/migrations/v4"
-	"example/x/feemarket/types"
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
+	"github.com/zkevm/sequencer/app"
+	"github.com/zkevm/sequencer/encoding"
+	v4 "github.com/zkevm/sequencer/x/feemarket/migrations/v4"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 type mockSubspace struct {

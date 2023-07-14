@@ -22,12 +22,12 @@ import (
 	sdkmath "cosmossdk.io/math"
 
 	errorsmod "cosmossdk.io/errors"
-	ethermint "example/types"
-	"example/x/evm/statedb"
-	"example/x/evm/types"
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
+	ethermint "github.com/zkevm/sequencer/types"
+	"github.com/zkevm/sequencer/x/evm/statedb"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 var _ statedb.Keeper = &Keeper{}

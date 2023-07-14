@@ -2,9 +2,9 @@ syntax = "proto3";
 package example.example;
 
 import "gogoproto/gogo.proto";
-import "example/example/params.proto";
+import "github.com/zkevm/sequencer/example/params.proto";
 
-option go_package = "example/x/example/types";
+option go_package = "github.com/zkevm/sequencer/x/example/types";
 
 // GenesisState defines the example module's genesis state.
 message GenesisState {

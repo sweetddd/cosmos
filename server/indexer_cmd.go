@@ -20,12 +20,12 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"example/indexer"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
 	tmnode "github.com/tendermint/tendermint/node"
 	sm "github.com/tendermint/tendermint/state"
 	tmstore "github.com/tendermint/tendermint/store"
+	"github.com/zkevm/sequencer/indexer"
 )
 
 func NewIndexTxCmd() *cobra.Command {

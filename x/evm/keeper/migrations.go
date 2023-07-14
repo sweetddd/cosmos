@@ -16,10 +16,10 @@
 package keeper
 
 import (
-	v4 "example/x/evm/migrations/v4"
-	v5 "example/x/evm/migrations/v5"
-	"example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	v4 "github.com/zkevm/sequencer/x/evm/migrations/v4"
+	v5 "github.com/zkevm/sequencer/x/evm/migrations/v5"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // Migrator is a struct for handling in-place store migrations.

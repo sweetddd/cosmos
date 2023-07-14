@@ -3,8 +3,8 @@ package types_test
 import (
 	"testing"
 
-	"example/x/example/types"
 	"github.com/stretchr/testify/require"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 func TestGenesisState_Validate(t *testing.T) {

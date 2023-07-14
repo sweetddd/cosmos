@@ -21,8 +21,8 @@ import (
 	"fmt"
 	"math/big"
 
-	"example/rpc/backend"
-	"example/rpc/types"
+	"github.com/zkevm/sequencer/rpc/backend"
+	"github.com/zkevm/sequencer/rpc/types"
 
 	"github.com/pkg/errors"
 	"github.com/tendermint/tendermint/libs/log"

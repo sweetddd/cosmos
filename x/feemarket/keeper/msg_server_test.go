@@ -1,9 +1,9 @@
 package keeper_test
 
 import (
-	"example/x/feemarket/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 func (suite *KeeperTestSuite) TestUpdateParams() {

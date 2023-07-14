@@ -5,10 +5,10 @@ import (
 	"errors"
 	"math/big"
 
-	"example/x/evm/statedb"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/zkevm/sequencer/x/evm/statedb"
 )
 
 var (

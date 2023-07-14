@@ -23,7 +23,7 @@ import (
 	rpcclient "github.com/tendermint/tendermint/rpc/client"
 	"github.com/tendermint/tendermint/types"
 
-	ethermint "example/types"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 const (

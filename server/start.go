@@ -61,11 +61,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/server/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"example/indexer"
-	ethdebug "example/rpc/namespaces/ethereum/debug"
-	"example/server/config"
-	srvflags "example/server/flags"
-	ethermint "example/types"
+	"github.com/zkevm/sequencer/indexer"
+	ethdebug "github.com/zkevm/sequencer/rpc/namespaces/ethereum/debug"
+	"github.com/zkevm/sequencer/server/config"
+	srvflags "github.com/zkevm/sequencer/server/flags"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 // DBOpener is a function to open `application.db`, potentially with customized options.

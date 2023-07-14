@@ -3,12 +3,12 @@ package backend
 import (
 	"encoding/json"
 
-	"example/rpc/backend/mocks"
-	ethrpc "example/rpc/types"
-	evmtypes "example/x/evm/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
 	tmtypes "github.com/tendermint/tendermint/types"
+	"github.com/zkevm/sequencer/rpc/backend/mocks"
+	ethrpc "github.com/zkevm/sequencer/rpc/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 func (suite *BackendTestSuite) TestGetLogs() {

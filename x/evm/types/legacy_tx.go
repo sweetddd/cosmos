@@ -19,9 +19,9 @@ import (
 	"math/big"
 
 	errorsmod "cosmossdk.io/errors"
-	"example/types"
 	"github.com/ethereum/go-ethereum/common"
 	ethtypes "github.com/ethereum/go-ethereum/core/types"
+	"github.com/zkevm/sequencer/types"
 )
 
 func newLegacyTx(tx *ethtypes.Transaction) (*LegacyTx, error) {

@@ -3,7 +3,7 @@ package cmd
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"example/app"
+	"github.com/zkevm/sequencer/app"
 )
 
 func initSDKConfig() {

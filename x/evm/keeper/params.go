@@ -16,8 +16,8 @@
 package keeper
 
 import (
-	"example/x/evm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // GetParams returns the total set of evm parameters.

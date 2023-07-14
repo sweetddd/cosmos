@@ -1,4 +1,4 @@
-module example
+module github.com/zkevm/sequencer
 
 go 1.19
 
@@ -24,7 +24,6 @@ require (
 	github.com/holiman/uint256 v1.2.0
 	github.com/improbable-eng/grpc-web v0.15.0
 	github.com/miguelmota/go-ethereum-hdwallet v0.1.1
-	github.com/onsi/gomega v1.18.1
 	github.com/pkg/errors v0.9.1
 	github.com/rakyll/statik v0.1.7
 	github.com/regen-network/cosmos-proto v0.3.1

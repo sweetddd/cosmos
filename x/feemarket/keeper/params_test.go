@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"reflect"
 
-	"example/x/feemarket/types"
+	"github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 func (suite *KeeperTestSuite) TestSetGetParams() {

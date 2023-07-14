@@ -1,10 +1,10 @@
 package backend
 
 import (
-	"example/rpc/backend/mocks"
-	rpc "example/rpc/types"
-	feemarkettypes "example/x/feemarket/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	"github.com/zkevm/sequencer/rpc/backend/mocks"
+	rpc "github.com/zkevm/sequencer/rpc/types"
+	feemarkettypes "github.com/zkevm/sequencer/x/feemarket/types"
 )
 
 var _ feemarkettypes.QueryClient = &mocks.FeeMarketQueryClient{}

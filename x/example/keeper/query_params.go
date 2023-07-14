@@ -3,8 +3,8 @@ package keeper
 import (
 	"context"
 
-	"example/x/example/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/zkevm/sequencer/x/example/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

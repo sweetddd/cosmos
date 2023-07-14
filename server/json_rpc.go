@@ -22,15 +22,15 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 
-	"example/rpc"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"
 	"github.com/cosmos/cosmos-sdk/server/types"
 	ethlog "github.com/ethereum/go-ethereum/log"
 	ethrpc "github.com/ethereum/go-ethereum/rpc"
+	"github.com/zkevm/sequencer/rpc"
 
-	"example/server/config"
-	ethermint "example/types"
+	"github.com/zkevm/sequencer/server/config"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 // StartJSONRPC starts the JSON-RPC server

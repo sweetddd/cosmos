@@ -25,9 +25,9 @@ import (
 	"github.com/ethereum/go-ethereum/crypto"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	ethermint "example/types"
-	"example/x/evm/keeper"
-	"example/x/evm/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	"github.com/zkevm/sequencer/x/evm/keeper"
+	"github.com/zkevm/sequencer/x/evm/types"
 )
 
 // InitGenesis initializes genesis state based on exported genesis

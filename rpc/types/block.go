@@ -32,7 +32,7 @@ import (
 
 	grpctypes "github.com/cosmos/cosmos-sdk/types/grpc"
 
-	ethermint "example/types"
+	ethermint "github.com/zkevm/sequencer/types"
 )
 
 // BlockNumber represents decoding hex string to block values

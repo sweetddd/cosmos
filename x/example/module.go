@@ -11,14 +11,14 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"example/x/example/client/cli"
-	"example/x/example/keeper"
-	"example/x/example/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/zkevm/sequencer/x/example/client/cli"
+	"github.com/zkevm/sequencer/x/example/keeper"
+	"github.com/zkevm/sequencer/x/example/types"
 )
 
 var (

@@ -19,7 +19,6 @@ import (
 	"fmt"
 
 	errorsmod "cosmossdk.io/errors"
-	rpctypes "example/rpc/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -29,9 +28,10 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	tmtypes "github.com/tendermint/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
+	rpctypes "github.com/zkevm/sequencer/rpc/types"
 
-	ethermint "example/types"
-	evmtypes "example/x/evm/types"
+	ethermint "github.com/zkevm/sequencer/types"
+	evmtypes "github.com/zkevm/sequencer/x/evm/types"
 )
 
 const (
