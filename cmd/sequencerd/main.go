@@ -7,7 +7,7 @@ import (
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
 	"example/app"
-	"example/cmd/exampled/cmd"
+	"example/cmd/sequencerd/cmd"
 )
 
 func main() {
