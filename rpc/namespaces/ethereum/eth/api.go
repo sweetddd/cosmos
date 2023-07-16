@@ -51,6 +51,8 @@ type EthereumAPI interface {
 	GetBlockByHash(hash common.Hash, fullTx bool) (map[string]interface{}, error)
 	GetBlockTransactionCountByHash(hash common.Hash) *hexutil.Uint
 	GetBlockTransactionCountByNumber(blockNum rpctypes.BlockNumber) *hexutil.Uint
+	GetHeaderByNumber(ethblockNum rpctypes.BlockNumber) (*ethtypes.Header, error)
+	GetHeaderByHash(blockHash common.Hash) (*ethtypes.Header, error)
 
 	// Reading Transactions
 	//
@@ -168,6 +170,18 @@ func (e *PublicAPI) GetBlockByNumber(ethBlockNum rpctypes.BlockNumber, fullTx bo
 func (e *PublicAPI) GetBlockByHash(hash common.Hash, fullTx bool) (map[string]interface{}, error) {
 	e.logger.Debug("eth_getBlockByHash", "hash", hash.Hex(), "full", fullTx)
 	return e.backend.GetBlockByHash(hash, fullTx)
+}
+
+// GetHeaderByNumber returns the block Header by number.
+func (e *PublicAPI) GetHeaderByNumber(ethblockNum rpctypes.BlockNumber) (*ethtypes.Header, error) {
+	e.logger.Debug("eth_getHeaderByNumber", "number", ethblockNum)
+	return e.backend.HeaderByNumber(ethblockNum)
+}
+
+// GetHeaderByHash returns the block Header by hash.
+func (e *PublicAPI) GetHeaderByHash(blockHash common.Hash) (*ethtypes.Header, error) {
+	e.logger.Debug("eth_getHeaderByHash", "hash", blockHash.Hex())
+	return e.backend.HeaderByHash(blockHash)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
