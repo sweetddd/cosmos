@@ -5,7 +5,7 @@ rm -rf onenode
 #go build -o ./onenode/sequencerd github.com/zkevm/sequencer/cmd/sequencerd
 #go install github.com/zkevm/sequencer/cmd/sequencerd
 
-sequencerd init node0 --chain-id testnet_8999-6 --home onenode
+sequencerd init node0 --chain-id testnet_9000-6 --home onenode
 
 yes | sequencerd keys add dev0 --home onenode --keyring-backend os
 
@@ -20,12 +20,12 @@ jq '.consensus_params["block"]["max_gas"]="10000000"' onenode/config/genesis.jso
 
 sequencerd add-genesis-account dev0 100000000000000000000000000eth --keyring-backend os --home onenode
 
-sequencerd gentx  dev0 1000000000000000000000eth --home onenode  --keyring-backend os --chain-id testnet_8999-6
+sequencerd gentx  dev0 1000000000000000000000eth --home onenode  --keyring-backend os --chain-id testnet_9000-6
 
 sequencerd collect-gentxs --home onenode
 
 echo "==========================get private==========================="
-yes | sequencerd keys unsafe-export-eth-key dev0 --home onenode  --keyring-backend os
+yes | sequencerd keys unsafe-export-eth-key dev0 --home onenode  --keyring-backend os \
 
 TRACE=""
 
