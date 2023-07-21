@@ -63,6 +63,6 @@ sed -i.bak  's/allow_duplicate_ip = false/allow_duplicate_ip = true/g' data/test
 TRACE=""
 
 # Start the node (remove the --pruning=nothing flag if historical queries are not needed)
-sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-0
+#sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-0
 #sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-1
 #sequencerd start --metrics "$TRACE" --log_level="info" --minimum-gas-prices=0.0001eth --json-rpc.api eth,txpool,personal,net,debug,web3 --api.enable --home data/testnet/zkevm-sequencer-2
