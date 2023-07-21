@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: $APP_NAME-2
+  namespace: chain-sandbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: $APP_NAME-2
+  template:
+    metadata:
+      labels:
+        app: $APP_NAME-2
+    spec:
+      containers:
+        - name: $APP_NAME-2
+          command: [ "/bin/sh","-c","cp -R  /root/.sequncerd/zkevm-sequencer-2/*  /data/blocks/zkevm/sequencer/batch/zkevm-sequencer-2;
+                  sequencerd start  --json-rpc.api eth,txpool,personal,net,debug,web3,miner --api.enable true --minimum-gas-prices 0.0001aseq  --home /data/blocks/zkevm/sequencer/batch/zkevm-sequencer-2 --p2p.seeds 4d7766a335b0d8344250283e73ce4eb18cb3beb4@zkevm-sequencer-0.chain-sandbox.svc.cluster.local:26656" ]
+          args: [ ""]
+          image:  $REGISTRY/$APP_NAME:SNAPSHOT-$BUILD_NUMBER
+          resources:
+            requests:
+              cpu: 1
+              memory: 2Gi
+            limits:
+              cpu: 2
+              memory: 4Gi
+          volumeMounts:
+            - name: data
+              mountPath: /data/blocks
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 1317
+            - containerPort: 8545
+            - containerPort: 26657
+            - containerPort: 26656
+          env:
+            - name: TZ
+              value: GMT
+      imagePullSecrets:
+        - name: regcred
+      volumes:
+        - name: host-time
+          hostPath:
+            path: /etc/localtime
+        - name: data
+          persistentVolumeClaim:
+            claimName: vmchain-ssd-pvc
+      restartPolicy: Always
+      dnsPolicy: ClusterFirst
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - $APP_NAME-2
+              topologyKey: "kubernetes.io/hostname"
+#  volumeClaimTemplates:
+#    - metadata:
+#        name: data
+#      spec:
+#        accessModes: [ "ReadWriteMany" ]
+#        storageClassName: "mvmchain-local-storage"
+#        resources:
+#          requests:
+#            storage: 10Gi
